@@ -4,7 +4,6 @@ jobs:
     first:
         strategy:
             matrix:
-                os: [ubuntu-latest, macos-latest]
                 images: [hello-world, alpine]
         runs-on: ubuntu-latest
         steps: 
