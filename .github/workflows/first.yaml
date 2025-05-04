@@ -9,7 +9,7 @@ jobs:
         runs-on: ${{ matrix.os }}
         steps: 
             - name: docker setup
-              uses: docker/setup-docker-actions@v
+              uses: docker/setup-docker-actions@v4
             - name: echo docker details
               run: docker info
             - name: run image
