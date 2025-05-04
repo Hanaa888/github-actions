@@ -2,9 +2,6 @@ name: cicd
 on: push
 jobs:
     first:
-        strategy:
-            matrix:
-                images: [hello-world, alpine]
         runs-on: ubuntu-latest
         steps: 
             - name: docker setup
@@ -12,5 +9,5 @@ jobs:
             - name: echo docker details
               run: docker info
             - name: run image
-              run: docker run ${{ matrix.images }}
+              run: docker run hello-world
                 
