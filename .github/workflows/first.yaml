@@ -2,7 +2,10 @@ name: cicd
 on: push
 jobs:
     first:
-        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                os: [ubuntu-latest, ubuntu-20, windows-latest]
+        runs-on: ${{ matrix.os }}
         steps: 
             - name:
               run:
