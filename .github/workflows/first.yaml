@@ -5,9 +5,11 @@ jobs:
         strategy:
             matrix:
                 os: [ubuntu-latest, ubuntu-20, windows-latest]
+                images: [hello-world, alpine]
         runs-on: ${{ matrix.os }}
         steps: 
-            - name:
-              run:
-                echo "Hello World"  
+            - name: echo docker details
+              run: docker info
+            - name: run image
+              run: docker run ${{ matrix.images }}
                 
