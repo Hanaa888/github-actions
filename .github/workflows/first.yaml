@@ -4,9 +4,9 @@ jobs:
     first:
         strategy:
             matrix:
-                os: [ubuntu-latest]
+                os: [ubuntu-latest, macos-latest]
                 images: [hello-world, alpine]
-        runs-on: ${{ matrix.os }}
+        runs-on: ubuntu-latest
         steps: 
             - name: docker setup
               uses: docker/setup-docker-actions@v4
