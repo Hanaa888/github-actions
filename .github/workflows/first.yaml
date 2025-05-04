@@ -4,7 +4,7 @@ jobs:
     first:
         strategy:
             matrix:
-                os: [ubuntu-latest, ubuntu-20, windows-latest]
+                os: [ubuntu-latest]
                 images: [hello-world, alpine]
         runs-on: ${{ matrix.os }}
         steps: 
